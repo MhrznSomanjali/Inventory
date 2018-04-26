@@ -2,17 +2,29 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6699ff">
-
+    android:background="#c4dfe6">
+    <TextView
+        android:id="@+id/entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:text="Drop your Entry here:"
+        />
 
 
     <EditText
         android:id="@+id/name"
-
+        android:layout_below="@+id/entry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:hint="product"
+        android:textColorHint="#aaaaaa"
+        android:hint="Product"
+
+        android:textColor="#000000"
         android:padding="20sp" />
 
     <EditText
@@ -22,6 +34,7 @@
         android:layout_below="@+id/name"
         android:gravity="center"
         android:hint="Quantity"
+        android:textColorHint="#aaaaaa"
         android:padding="20sp" />
 
     <EditText
@@ -30,33 +43,46 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/quantity"
         android:gravity="center"
+        android:textColorHint="#aaaaaa"
         android:hint="Damage number"
         android:padding="20sp" />
+
     <EditText
+        android:id="@+id/description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/description"
         android:layout_below="@+id/damage"
         android:gravity="center"
-        android:padding="20sp"
-        android:hint="Description"/>
+        android:textColorHint="#aaaaaa"
+        android:hint="Description"
+        android:padding="20sp" />
 
     <Button
         android:id="@+id/cancelbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/description"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/description"
+
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="63dp"
+        android:background="#0099cc"
         android:gravity="center"
-        android:text="cancel"
-        />
+        android:padding="25dp"
+        android:text="cancel" />
+
     <Button
         android:id="@+id/savebtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/description"
+        android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
+        android:layout_marginTop="63dp"
+        android:layout_marginRight="63dp"
+        android:background="#0099cc"
+        android:layout_below="@id/description"
+        android:padding="25dp"
         android:gravity="center"
-        android:text="save"
-        />
+        android:text="save" />
 
 </RelativeLayout>
